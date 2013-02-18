@@ -21,11 +21,12 @@ using Framework.Console.Commands;
 using Framework.Database;
 using Framework.DBC;
 using Framework.Logging;
-﻿using System;
-﻿using WorldServer.Game;
-﻿using WorldServer.Game.Chat;
-﻿using WorldServer.Game.Packets;
-﻿using WorldServer.Network;
+using Framework.Revision;
+using System;
+using WorldServer.Game;
+using WorldServer.Game.Chat;
+using WorldServer.Game.Packets;
+using WorldServer.Network;
 
 namespace WorldServer
 {
@@ -42,6 +43,9 @@ namespace WorldServer
             Log.Message(LogType.INIT, "  /   |  /   ) /   ' /    /   /   /  / /  )");
             Log.Message(LogType.INIT, "_/____|_/_____(___ _(_ __/___(___(__/_/__/_");
             Log.Message(LogType.INIT, "___________________________________________");
+            Log.Message();
+
+            Log.Message(LogType.INIT, "Version: {0} (Milestone, Commit, Build)", Revision.GetFullVersion());
             Log.Message();
 
             Log.Message(LogType.NORMAL, "Starting Arctium WorldServer...");

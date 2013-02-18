@@ -20,6 +20,7 @@ using Framework.Database;
 using Framework.Logging;
 using Framework.Network.Realm;
 using Framework.ObjectDefines;
+using Framework.Revision;
 using System;
 
 namespace RealmServer
@@ -37,6 +38,9 @@ namespace RealmServer
             Log.Message(LogType.INIT, "  /   |  /   ) /   ' /    /   /   /  / /  )");
             Log.Message(LogType.INIT, "_/____|_/_____(___ _(_ __/___(___(__/_/__/_");
             Log.Message(LogType.INIT, "___________________________________________");
+            Log.Message();
+
+            Log.Message(LogType.INIT, "Version: {0} (Milestone, Commit, Build)", Revision.GetFullVersion());
             Log.Message();
 
             Log.Message(LogType.NORMAL, "Starting Arctium RealmServer...");
