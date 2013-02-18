@@ -15,12 +15,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+using System.Reflection;
+
 namespace Framework.Revision
 {
-    public enum Version
+    public class Version
     {
-        Milestone = 0,
-        Commit    = 125,
-        Build     = 14,
+        public static int Milestone = 0;
+        public static int Commit    = 126;
+        public static int Build = Assembly.GetCallingAssembly().GetName().Version.Build;
     }
 }
